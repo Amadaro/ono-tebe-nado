@@ -1,1 +1,405 @@
-/* место для вашего кода */
+/* ========= Переиспользуемые селекторы ========= */
+.link {
+  text-decoration: none;
+  border-bottom: solid 1px #000;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  inset: 0;
+}
+
+.bet-button {
+  padding: 12px 31px;
+  background: transparent;
+  border: 1px solid #fff;
+  font-style: normal;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ========= Шапка ========= */
+
+.header {
+  margin: 92px 28px 92px 29px;
+}
+.header__menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 2fr;
+}
+.header__logo-image {
+  max-height: 105px;
+}
+.header__links-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: circle;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  gap: 27px;
+}
+
+.header__link_active {
+  border-bottom: none;
+  text-decoration: none;
+}
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  list-style: none;
+  font-size: 18px;
+  line-height: 135%;
+}
+.contacts_item {
+  padding-left: 156px;
+}
+
+.header__address {
+  font-style: normal;
+}
+
+/* ========= Мейнфрейм ========= */
+.cover {
+  position: relative;
+  z-index: 0;
+
+  background-image: url(/images/cover.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.cover__title {
+  position: relative;
+  padding: 165px 50px 135px 50px;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 115%;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.cover__title-word {
+  display: block;
+  margin-top: 20px;
+  line-height: 100%;
+}
+
+.cover__title-word-center {
+  text-align: center;
+}
+.cover__title-word-right {
+  text-align: end;
+}
+.cover__word-spacing {
+  letter-spacing: 0.6em;
+}
+.cover__word-without-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description {
+  padding: 0 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* justify-content: space-around; */
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 79px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 1;
+}
+.cover__description-text {
+  text-transform: uppercase;
+  word-spacing: 0.85em;
+  line-height: 28px;
+  font-size: 22px;
+}
+
+/* ========= Лоты ========= */
+
+.lots {
+  margin: 179px 24px 147px 24px;
+}
+.lots__heading {
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-left: 40px;
+  margin-bottom: 27px;
+}
+
+.lots__card-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.lots__card-list-item {
+  position: relative;
+  max-width: 334px;
+  max-height: 563px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  color: #fff;
+}
+.card__title,
+.card__text {
+  z-index: 2;
+}
+
+.card__text-dots {
+  letter-spacing: 0.13em;
+}
+.card__title {
+  padding: 51px 40px 0px 40px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+.card__text {
+  padding: 0px 40px 48px 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.card_type_film {
+  background-image: url(/images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card_type_book {
+  background-image: url(/images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card_type_picture {
+  background-image: url(/images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lots__look-more-link {
+  margin-left: 40px;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/* ========= Об аукционе ========= */
+
+.about {
+  margin: 0px 24px 181px;
+  display: -ms-grid;
+  display: grid;
+  gap: 12px;
+  -ms-grid-columns: 1fr 12px 2fr;
+  grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 1fr 12px 1fr;
+  grid-template-rows: 1fr 1fr;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.about > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.about > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.about > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.about > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.about__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+.about__column-text {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+  padding-top: 136px;
+}
+.about__column-logo {
+  padding-top: 34px;
+  padding-right: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.about__logo-image {
+  max-height: 114px;
+  max-width: 148px;
+}
+
+.about__title {
+  margin-bottom: 100px;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.about__description-block {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+.about__description-block-text {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+}
+.about__description-block-text-last {
+  margin-bottom: 0;
+}
+
+/*========= Подвал ========= */
+
+.footer {
+  margin: 0 50px 88px;
+}
+.footer__menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer__social-icon {
+  max-height: 48px;
+}
+
+.footer__contacts_item {
+  padding: 0;
+}
+
+.footer__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+}
+
+.footer__menu-list-item {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  -ms-grid-column-align: right;
+  justify-self: right;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 48px;
+  width: 240px;
+}
